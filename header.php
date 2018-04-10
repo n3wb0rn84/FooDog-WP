@@ -8,11 +8,13 @@
   <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
   <title><? bloginfo('name'); ?></title>
   <? wp_head(); ?>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body <? body_class(); ?>>
   <div class="container">
     <!-- site-header -->
     <header class="site-header">
+      <article class="header-wrap">
       <h1><a href="<? echo home_url(); ?>"><? bloginfo('name'); ?></a></h1>
       <nav class="site-nav">
 
@@ -22,4 +24,5 @@
         ?>
         <? wp_nav_menu( $args ); ?>
       </nav>
+      </article>
     </header><!-- end site-header -->

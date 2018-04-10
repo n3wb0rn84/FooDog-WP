@@ -1,18 +1,64 @@
 <?php
 
-get_header();
+get_header();?>
 
+<div class="site-top">
+<?php
 if (have_posts()) :
-  while (have_posts()) : the_post();?>
+  while (have_posts()) : the_post();
+    if (has_tag('bigarticle')){?>
+    <article class="post big-article">
+      <?php the_post_thumbnail('big-article');?>
+      <h3><a href="<? the_permalink(); ?>">
+        <?php
+        $categories = get_the_category();
+        $separator = ' ';
+        $output = '';
 
-  <h2><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h2>
-  <p><? the_content(); ?></p>
-  <? endwhile;
-  else :
-    echo '<p>no content</p>';
+        if ($categories){
+          foreach($categories as $category){
+            $output .= $category->cat_name . $separator;
+          }
+          echo $output;
+        }
+       ?>
+     </a></h3>
+      <h2><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h2>
+    </article>
+    <?php
+  }
+  endwhile;
+endif;?>
+  <div class="small-wrapper">
+    <? if (have_posts()) :
+          while (have_posts()) : the_post();
+            if (has_tag('smallarticle')){?>
+              <article class="post small-article">
+                <?php the_post_thumbnail('small-article'); ?>
+                <h2><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h2>
+              </article>
+    <?php } ?>
 
-  endif;
-
+    <?
+  endwhile;
+endif;?>
+</div>
+</div>
+  <div class="site-featured">
+  <?php
+    if (have_posts()) :
+      while (have_posts()) : the_post();
+        if (has_category('Featured')){?>
+          <div class="featured-img"><?php the_post_thumbnail('feat-article'); ?></div>
+          <article class="featured-articles">
+            <span><?php the_category(); ?></span>
+            <h2><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h2>
+            <p><?php the_content('SHARE'); ?></p>
+          </article>
+  <?}
+    endwhile;
+    endif;?>
+      </div>
+<?php
 get_footer();
-
  ?>
