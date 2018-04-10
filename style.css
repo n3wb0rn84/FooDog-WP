@@ -302,7 +302,7 @@ body {
   grid-area: aside;
   display: inline-grid;
   width: 15.5vw;
-  grid-template-rows: repeat(3, 4.5vh);
+  grid-template-rows: 4.5vh 4.5vh 4.5vh 15vh;
   grid-template-areas: 'socFb' 'socTw' 'socIn';
   grid-row-gap: 0.1vw;
   margin-right: 34%;
@@ -353,6 +353,11 @@ body {
 .aside.inst{
   grid-area: socIn;
   background-color: #629cbe;
+}
+
+.aside-pub{
+  padding-top: 19%;
+  padding-left: 6%;
 }
 
 /* Separate page layout */

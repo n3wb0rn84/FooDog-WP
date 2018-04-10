@@ -15,4 +15,17 @@
     <p>200.000 Followers</p>
     <p><a href="#">Follow</a></p>
   </div>
+  <div class="aside-pub">
+    <?php
+    if (have_posts()) :
+      while (have_posts()) : the_post();
+        if (has_tag('pub')){?>
+        <article class="pub">
+          <? the_post_thumbnail('pub-article'); ?>
+        </article>
+        <?php
+      }
+      endwhile;
+    endif;?>
+  </div>
 </article>
