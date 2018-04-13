@@ -16,6 +16,7 @@ function wpNatives_setup() {
   add_image_size('small-article', 175, 135, false);
   add_image_size('feat-article', 240, 150, false);
   add_image_size('pub-article', 180, 400, false);
+  add_image_size('foot-img', 75, 75, false);
 
   // Add format support
   add_theme_support('post-formats', array('aside'));

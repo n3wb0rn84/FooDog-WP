@@ -16,16 +16,6 @@
     <p><a href="#">Follow</a></p>
   </div>
   <div class="aside-pub">
-    <?php
-    if (have_posts()) :
-      while (have_posts()) : the_post();
-        if (has_tag('pub')){?>
-        <article class="pub">
-          <? the_post_thumbnail('pub-article'); ?>
-        </article>
-        <?php
-      }
-      endwhile;
-    endif;?>
+    <img style="width:100%;height:auto;" src="http://localhost/wordpress/wp-content/uploads/2018/04/pub-dog.png" alt="DogoFood">
   </div>
 </article>

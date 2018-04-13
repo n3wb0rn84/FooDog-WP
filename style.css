@@ -169,7 +169,7 @@ body {
 .site-middle{
   display: grid;
   width: 100%;
-  grid-template-columns: 3fr, 1fr;
+  grid-template-columns: 3fr 1fr;
   grid-template-areas: 'siteFeat aside';
 }
 
@@ -360,6 +360,128 @@ body {
   padding-left: 6%;
 }
 
+/* Latest posts */
+.latest-img{
+  grid-area: laImg;
+  display: inline-block;
+}
+
+.latest-articles{
+  grid-area: laArt;
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  width: 99%;
+}
+
+.pag-wrap{
+  grid-area: pagWrap;
+}
+
+.latest-wrapper{
+  padding: 5%;
+  width: 21vw;
+}
+
+.latest-post {
+  border-top: 2px solid rgba(211, 211, 211, 0.3);
+  display: grid;
+  grid-template-rows: repeat(3, 53vh);
+  position: relative;
+  width: 42vw;
+  margin: 1%;
+  margin-bottom: 7%;
+}
+
+.latest-post:before{
+  content: 'latest posts';
+  font-size: 50%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 115%;
+  color: black;
+  position: absolute;
+  display: block;
+  width: 17%;
+  top: -0.7%;
+  left: -2.5%;
+  background-color: white;
+  padding: 1px;
+  padding-right: 0px;
+  padding-left: 8%;
+  text-align: center;
+}
+
+.latest-wrapper {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 10%;
+  padding-left: 11%;
+}
+
+.latest-articles span{
+  display: inline-block;
+  width: 62%;
+  margin: 0 auto;
+}
+
+.latest-articles span ul {
+  list-style-type: none;
+  width: 100%;
+  margin: 0;
+  justify-content: center;
+  padding: 0;
+  display: flex;
+}
+
+.latest-articles span ul li{
+
+}
+
+.latest-articles span ul li:nth-child(n+2){
+  padding-left:3%;
+}
+
+.latest-articles span ul li a:link,
+.latest-articles span ul li a:visited{
+  color:red;
+  font-size:55%;
+  text-decoration: none;
+}
+
+.latest-articles h2{
+  font-size: 75%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.latest-articles p{
+  font-size:65%;
+  text-align: center;
+}
+
+/* Archives Layout */
+
+.pages-container{
+  display: grid;
+  width: 100%;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: 'artWrap aside';
+}
+
+.articles-wrapper{
+  grid-area: artWrap;
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(8, 34vh);
+  border-top: 2px solid rgba(211, 211, 211, 0.3);
+  margin-left: 6.5%;
+  width: 90%;
+}
+
 /* Separate page layout */
 
 .pages h2 {
@@ -371,7 +493,62 @@ body {
 /* footer */
 
 .site-footer{
+  background-color: #3c4045;
   grid-area: foot;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 47vh 13vh;
+  grid-template-areas: ' . footNav poPost . . ' ' copyR copyR copyR copyR copyR ';
   /* position: fixed;
   bottom:0; */
+}
+
+.copyR {
+  display: inline-block;
+  width: 100%;height: 100%;
+  grid-area: copyR;
+  color: white;
+  text-align: center;
+  background-color: #333639;
+}
+
+.footer-nav{
+  grid-area: footNav;
+}
+
+.footer-nav legend{
+  color: white;
+}
+
+.footer-nav ul{
+  display: flex;
+  flex-direction: column;
+  margin:0;
+  padding:0;
+}
+
+.footer-nav ul li{
+  list-style-type: none;
+  display: inline-block;
+  padding-bottom:10%;
+  padding-top:10%;
+}
+
+.footer-nav ul li a {
+  color:white;
+  text-decoration: none;
+}
+
+.pop-posts{
+  grid-area: poPost;
+}
+
+.pop-posts legend {
+  color: white;
+  padding: 1%;
+}
+
+.pop-posts p {
+  font-size: 50%;
+  color: white;
 }

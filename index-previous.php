@@ -27,10 +27,10 @@ if (have_posts()) :
     </article>
     <?php
   }
-    endwhile;
-  endif;
-
-  ?>
+  endwhile;
+endif;
+rewind_posts();
+?>
   <div class="small-wrapper">
     <? if (have_posts()) :
           while (have_posts()) : the_post();
@@ -39,14 +39,14 @@ if (have_posts()) :
                 <?php the_post_thumbnail('small-article'); ?>
                 <h2><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h2>
               </article>
-        <?php } ?>
+    <?php } ?>
 
-        <?
-      endwhile;
-    endif;
-
-    ?>
-  </div>
+    <?
+  endwhile;
+endif;
+rewind_posts();
+?>
+</div>
 </div>
 <div class="site-middle">
   <div class="site-featured">
@@ -64,7 +64,7 @@ if (have_posts()) :
   <?}
     endwhile;
     endif;
-
+    rewind_posts();
     ?>
   </div>
   <article class="site-aside">
@@ -96,7 +96,7 @@ if (have_posts()) :
         }
         endwhile;
       endif;
-
+      rewind_posts();
       ?>
     </div>
   </article>
@@ -108,7 +108,7 @@ if (have_posts()) :
 
     $latestposts = new WP_Query(array(
       'category_name' => 'nutrition,wellness,featured',
-      'posts_per_page' => 6,
+      'posts_per_page' => 8,
       'paged' => $currentPage
     ));
 
@@ -120,9 +120,8 @@ if (have_posts()) :
           <div class="post latest-wrapper">
             <div class="latest-img"><?php the_post_thumbnail('feat-article'); ?></div>
             <article class="latest-articles">
-              <span><?php the_category() ?></span>
               <h2><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h2>
-              <p><?php the_content(''); ?></p>
+              <p><?php the_content(); ?></p>
             </article>
           </div>
   <?endwhile;
