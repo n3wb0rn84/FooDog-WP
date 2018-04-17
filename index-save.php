@@ -40,36 +40,67 @@ wp_reset_postdata();?>
                 <?php the_post_thumbnail('small-article'); ?>
                 <h2><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h2>
               </article>
-        <?php
+        <?php } ?>
+
+        <?
       }
-      }
+    }
     wp_reset_postdata();
     ?>
   </div>
 </div>
 <div class="site-middle">
   <div class="site-featured">
-    <?php
-    $my_query1 = new WP_Query( 'category_name="featured"&posts_per_page=3' );
-    if ( $my_query1->have_posts() ) {
-      while ( $my_query1->have_posts() ) {
-        $my_query1->the_post();?>
-        <div class="featured-img"><?php the_post_thumbnail('feat-article'); ?></div>
-        <article class="featured-articles">
-          <span><?php the_category(); ?></span>
-          <h2><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h2>
-          <?php the_content('READ MORE'); ?>
-          <i class="far fa-arrow-alt-circle-right fa-3x"></i>
-        </article>
-        <?php
-      }
-      }
-    wp_reset_postdata();
+  <?php
+    if (have_posts()) :
+      while (have_posts()) : the_post();
+        if (has_category('Featured')){?>
+          <div class="featured-img"><?php the_post_thumbnail('feat-article'); ?></div>
+          <article class="featured-articles">
+            <span><?php the_category(); ?></span>
+            <h2><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h2>
+            <p><?php the_content('READ MORE'); ?></p>
+            <i class="far fa-arrow-alt-circle-right fa-3x"></i>
+          </article>
+  <?}
+    endwhile;
+    endif;
+
     ?>
   </div>
+  <article class="site-aside">
+    <div class="aside fb">
+      <!-- icone - follower - follow -->
+      <i class="fab fa-facebook-f"></i>
+      <p>200.000 Fans</p>
+      <p><a href="#">Like</a></p>
+    </div>
+    <div class="aside tw">
+      <i class="fab fa-twitter"></i>
+      <p>200.000 Followers</p>
+      <p><a href="#">Follow</a></p>
+    </div>
+    <div class="aside inst">
+      <i class="fab fa-instagram"></i>
+      <p>200.000 Followers</p>
+      <p><a href="#">Follow</a></p>
+    </div>
+    <div class="aside-pub">
+      <?php
+      if (have_posts()) :
+        while (have_posts()) : the_post();
+          if (has_tag('pub')){?>
+          <article class="pub">
+            <? the_post_thumbnail('pub-article'); ?>
+          </article>
+          <?php
+        }
+        endwhile;
+      endif;
 
-
-<?php get_template_part('content-aside'); ?>
+      ?>
+    </div>
+  </article>
 </div>
 <div class="latest-post">
   <!-- à ajouter en :before <legend>Latest posts</legend> -->
@@ -96,7 +127,7 @@ wp_reset_postdata();?>
             </article>
           </div>
   <?endwhile;
-  wp_reset_postdata();?>
+  wp_reset_postdata($latestposts);?>
     <div class="pag-wrap">
       <? echo paginate_links($latestposts); ?>
     </div>
