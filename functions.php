@@ -26,6 +26,7 @@ add_action('after_setup_theme', 'wpNatives_setup');
 
 function import_ressources() {
   wp_enqueue_style('style', get_stylesheet_uri());
+  wp_enqueue_style('style-page', get_stylesheet_uri());
 }
 
 add_action('wp_enqueue_scripts', 'import_ressources');

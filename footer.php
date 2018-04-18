@@ -9,6 +9,7 @@
   </nav>
   <div class="pop-posts">
     <legend>Popular posts</legend>
+    <div class="pop-grid">
     <?php
     $my_query4 = new WP_Query( 'tag="popular"&posts_per_page=3' );
     if ( $my_query4->have_posts() ) {
@@ -17,12 +18,27 @@
         <div class="img-pop">
           <? the_post_thumbnail('foot-img');?>
         </div>
-        <p><? the_title(); ?></p>
+        <div class="p-pop">
+          <p><? the_title(); ?></p>
+        </div>
         <?php
       }
       }
     wp_reset_postdata();
     ?>
+    </div>
+  </div>
+  <div class="site-instagram">
+    <legend>Instagram</legend>
+      <img style="width:5vw;height:10vh;" src="http://localhost/wordpress/wp-content/uploads/2018/04/pexels-photo-356378.jpeg" alt="DogoFood">
+      <img style="width:5vw;height:10vh;" src="http://localhost/wordpress/wp-content/uploads/2018/04/pexels-photo-356378.jpeg" alt="DogoFood">
+      <img style="width:5vw;height:10vh;" src="http://localhost/wordpress/wp-content/uploads/2018/04/pexels-photo-356378.jpeg" alt="DogoFood">
+      <img style="width:5vw;height:10vh;" src="http://localhost/wordpress/wp-content/uploads/2018/04/pexels-photo-356378.jpeg" alt="DogoFood">
+      <img style="width:5vw;height:10vh;" src="http://localhost/wordpress/wp-content/uploads/2018/04/pexels-photo-356378.jpeg" alt="DogoFood">
+      <img style="width:5vw;height:10vh;" src="http://localhost/wordpress/wp-content/uploads/2018/04/pexels-photo-356378.jpeg" alt="DogoFood">
+      <img style="width:5vw;height:10vh;" src="http://localhost/wordpress/wp-content/uploads/2018/04/pexels-photo-356378.jpeg" alt="DogoFood">
+      <img style="width:5vw;height:10vh;" src="http://localhost/wordpress/wp-content/uploads/2018/04/pexels-photo-356378.jpeg" alt="DogoFood">
+      <img style="width:5vw;height:10vh;" src="http://localhost/wordpress/wp-content/uploads/2018/04/pexels-photo-356378.jpeg" alt="DogoFood">
   </div>
   <p class="copyR"><? echo date('Y'); ?> - &copy; <? bloginfo('name'); ?></p>
 </footer>

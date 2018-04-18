@@ -67,8 +67,6 @@ wp_reset_postdata();?>
     wp_reset_postdata();
     ?>
   </div>
-
-
 <?php get_template_part('content-aside'); ?>
 </div>
 <div class="latest-post">
@@ -81,6 +79,11 @@ wp_reset_postdata();?>
       'posts_per_page' => 6,
       'paged' => $currentPage
     ));
+
+    $args = array(
+      	'prev_text' => __('«'),
+      	'next_text' => __('»')
+      );
 
     // query_posts($latestposts);
 
@@ -97,10 +100,11 @@ wp_reset_postdata();?>
           </div>
   <?endwhile;
   wp_reset_postdata();?>
+  </div>
     <div class="pag-wrap">
-      <? echo paginate_links($latestposts); ?>
+      <? echo paginate_links($args); ?>
     </div>
-  </div>  <?
+    <?
 
   endif;
     ?>
