@@ -493,17 +493,13 @@ body {
   margin-right: -0.67%;
   text-transform: uppercase;
   margin-top: 1%;
-}
-
-.pages-title h2{
-  display: inline-block;
-  padding-bottom: 1%;
+  margin-bottom: -1%;
 }
 
 .archive-pages{
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 18.5vh 10vh 322vh 11vh 60vh;
+  grid-template-rows: 18.5vh 10vh 289vh 11vh 60vh;
   grid-template-areas: ' . siteHead siteHead siteHead siteHead siteHead siteHead siteHead siteHead siteHead siteHead .'
                        ' catTitle catTitle catTitle catTitle catTitle catTitle catTitle catTitle catTitle catTitle catTitle catTitle '
                        ' . . pagCont pagCont pagCont pagCont pagCont pagCont pagCont pagCont . . '
@@ -556,6 +552,7 @@ body {
   grid-template-rows: 47vh 13vh;
   grid-template-areas: ' . footNav poPost instaG . ' ' copyR copyR copyR copyR copyR ';
   margin-left: -0.65%;
+  margin-right: -0.67%;
 }
 
 .copyR {

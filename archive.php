@@ -6,7 +6,7 @@ get_header('pages'); ?>
 <div class="site-middle pages-container">
   <div class="pages-wrapper">
     <?
-
+    $currentPage1 = get_query_var('paged') ? get_query_var('paged') : 1;
     $categories1 = get_the_category();
     foreach($categories1 as $category1){
         $output1 = $category1->cat_name;
@@ -14,7 +14,7 @@ get_header('pages'); ?>
 
     $my_query8 = new WP_Query(array('category_name' => $output1,
                                     'posts_per_page' => 8,
-                                    'paged' => $currentPage ));
+                                    'paged' => $currentPage1 ));
     $args1 = array(
         'prev_text' => __('«'),
         'next_text' => __('»')
