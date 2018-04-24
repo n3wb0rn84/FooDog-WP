@@ -30,15 +30,15 @@
   </div>
   <div class="site-instagram">
     <legend>Instagram</legend>
-      <img style="width:5vw;height:10vh;" src="http://localhost/wordpress/wp-content/uploads/2018/04/pexels-photo-356378.jpeg" alt="DogoFood">
-      <img style="width:5vw;height:10vh;" src="http://localhost/wordpress/wp-content/uploads/2018/04/pexels-photo-356378.jpeg" alt="DogoFood">
-      <img style="width:5vw;height:10vh;" src="http://localhost/wordpress/wp-content/uploads/2018/04/pexels-photo-356378.jpeg" alt="DogoFood">
-      <img style="width:5vw;height:10vh;" src="http://localhost/wordpress/wp-content/uploads/2018/04/pexels-photo-356378.jpeg" alt="DogoFood">
-      <img style="width:5vw;height:10vh;" src="http://localhost/wordpress/wp-content/uploads/2018/04/pexels-photo-356378.jpeg" alt="DogoFood">
-      <img style="width:5vw;height:10vh;" src="http://localhost/wordpress/wp-content/uploads/2018/04/pexels-photo-356378.jpeg" alt="DogoFood">
-      <img style="width:5vw;height:10vh;" src="http://localhost/wordpress/wp-content/uploads/2018/04/pexels-photo-356378.jpeg" alt="DogoFood">
-      <img style="width:5vw;height:10vh;" src="http://localhost/wordpress/wp-content/uploads/2018/04/pexels-photo-356378.jpeg" alt="DogoFood">
-      <img style="width:5vw;height:10vh;" src="http://localhost/wordpress/wp-content/uploads/2018/04/pexels-photo-356378.jpeg" alt="DogoFood">
+      <img src="http://localhost/wordpress/wp-content/uploads/2018/04/pexels-photo-356378.jpeg" alt="DogoFood">
+      <img src="http://localhost/wordpress/wp-content/uploads/2018/04/pexels-photo-356378.jpeg" alt="DogoFood">
+      <img src="http://localhost/wordpress/wp-content/uploads/2018/04/pexels-photo-356378.jpeg" alt="DogoFood">
+      <img src="http://localhost/wordpress/wp-content/uploads/2018/04/pexels-photo-356378.jpeg" alt="DogoFood">
+      <img src="http://localhost/wordpress/wp-content/uploads/2018/04/pexels-photo-356378.jpeg" alt="DogoFood">
+      <img src="http://localhost/wordpress/wp-content/uploads/2018/04/pexels-photo-356378.jpeg" alt="DogoFood">
+      <img src="http://localhost/wordpress/wp-content/uploads/2018/04/pexels-photo-356378.jpeg" alt="DogoFood">
+      <img src="http://localhost/wordpress/wp-content/uploads/2018/04/pexels-photo-356378.jpeg" alt="DogoFood">
+      <img src="http://localhost/wordpress/wp-content/uploads/2018/04/pexels-photo-356378.jpeg" alt="DogoFood">
   </div>
   <p class="copyR"><? echo date('Y'); ?> - &copy; <? bloginfo('name'); ?></p>
 </footer>

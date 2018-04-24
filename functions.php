@@ -12,11 +12,11 @@ function wpNatives_setup() {
   ));
   // Add featured images
   add_theme_support('post-thumbnails');
-  add_image_size('big-article', 430, 430, true);
-  add_image_size('small-article', 175, 135, false);
-  add_image_size('feat-article', 240, 150, false);
-  add_image_size('pub-article', 180, 400, false);
-  add_image_size('foot-img', 75, 75, false);
+  // add_image_size('big-article', 430, 430, true);
+  // add_image_size('small-article' , 175, 135, false);
+  // add_image_size('feat-article', 240, 150, true);
+  // add_image_size('pub-article', 180, 400, false);
+  // add_image_size('foot-img', 75, 75, false);
 
   // Add format support
   add_theme_support('post-formats', array('aside'));
